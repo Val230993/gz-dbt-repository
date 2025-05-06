@@ -1,6 +1,7 @@
 ---Operational_margin = margin + shipping_fee - log_cost - ship_cost
 
 SELECT
+m.date_date,
 m.margin,
 s.shipping_fee,
 s.ship_cost,
