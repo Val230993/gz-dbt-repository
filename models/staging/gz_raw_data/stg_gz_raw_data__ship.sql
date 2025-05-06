@@ -7,7 +7,7 @@ source as (
         shipping_fee,
         logcost,
         ship_cost
-    from {{ source('gz_raw_data', 'ship') }}
+    from {{ source('raw', 'ship') }}
 
 ),
 
