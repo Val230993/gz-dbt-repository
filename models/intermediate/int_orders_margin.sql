@@ -7,4 +7,3 @@ SELECT
     ,ROUND(SUM(margin),2) AS margin
 FROM {{ref("int_sales_margin")}}
 GROUP BY orders_id, date_date
-ORDER BY date_date desc, orders_id desc
