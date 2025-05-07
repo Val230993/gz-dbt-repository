@@ -7,7 +7,7 @@ SELECT
     s.quantity,
     (p.purchase_price * s.quantity) AS purchase_cost,
     s.revenue - p.purchase_price * s.quantity AS margin,
-    {{ margin_percent('s.revenue - p.purchase_price * s.quantity', 's.revenue') }} AS margin_percent
+    {{ margin_percent('s.revenue', 'p.purchase_price * s.quantity') }} AS margin_percent
 FROM {{ ref("stg_gz_raw_data__product") }} p
 LEFT JOIN {{ ref("stg_gz_raw_data__sales") }} s
     ON p.products_id = s.product_id
